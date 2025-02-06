@@ -23,14 +23,22 @@ const ContainerInput: FC<InputBaseInterface> = ({
   iconPosition = "left",
 }) => {
   return (
-    <ContainerInputTag labelPosition={labelPosition}>
-      <LabelTag htmlFor={id} labelPosition={labelPosition}>
+    <ContainerInputTag labelPosition={labelPosition} className="ibr-container">
+      <LabelTag
+        htmlFor={id}
+        labelPosition={labelPosition}
+        className="ibr-label"
+      >
         {label} {required && <sup>*</sup>}
       </LabelTag>
 
-      <ContainerIconTag iconPosition={iconPosition}>
+      <ContainerIconTag
+        iconPosition={iconPosition}
+        className="ibr-icon-container"
+      >
         <Icon>{icon}</Icon>
         <InputTag
+          className="ibr-input"
           value={value}
           name={name}
           id={id}

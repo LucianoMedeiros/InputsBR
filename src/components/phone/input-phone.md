@@ -71,23 +71,36 @@ import { InputPhone } from "inputsbr";
 
 ## 🎨 **Estilização Personalizada**
 
-O componente utiliza a função `classNames` para aplicar classes CSS dinamicamente com base na posição da label. Para personalizar estilos:
+O componente possui a seguinte estrutura:
 
-```css
-.position-left {
-  display: flex;
-  align-items: center;
-}
-
-.position-right {
-  display: flex;
-  flex-direction: row-reverse;
-}
+```html
+<div class="ibr-component ibr-input-phone">
+  <div class="ibr-container">
+    <label class="ibr-label">Label name</label>
+    <div class="ibr-icon-container">
+      <span class="ibr-icon"><svg></svg></span>
+      <input class="ibr-input" value="" />
+    </div>
+  </div>
+  <span class="ibr-error-message">Error message</span>
+</div>
 ```
+
+Você pode usar as classes padrões para sobrescrever os estilos padrões:
+
+| **Classe**            | **Decrição**                               |
+| --------------------- | ------------------------------------------ |
+| `.ibr-input-phone`    | Container do component                     |
+| `.ibr-error-message`  | Container da mensagem de erro              |
+| `.ibr-container`      | Container da label e do container do input |
+| `.ibr-label`          | Label do componente                        |
+| `.ibr-icon-container` | Container do input + ícone                 |
+| `.ibr-icon`           | Container do ícone                         |
+| `.ibr-input`          | Container do input                         |
 
 ---
 
-## 🧪 **Testes**
+<!-- ## 🧪 **Testes** 🎉
 
 O componente pode ser testado usando **Jest** e **React Testing Library**. Aqui está um exemplo básico de teste:
 
@@ -118,7 +131,6 @@ test("deve disparar o evento onChange ao alterar o valor", () => {
   expect(handleChange).toHaveBeenCalled();
 });
 ```
-
 ---
 
 ## 📄 **Notas**
@@ -127,11 +139,10 @@ test("deve disparar o evento onChange ao alterar o valor", () => {
 - Certifique-se de definir corretamente o atributo `name` para facilitar a coleta dos dados no formulário.
 
 ---
+-->
 
 ## 🚀 **Pronto para usar**
 
-O componente `ContainerInput` é flexível e pode ser reutilizado em diferentes contextos de formulário, como autenticação, cadastro e perfis de usuário. Com suporte a validações e personalizações, ele é uma escolha sólida para aplicações modernas.
+O componente `InputPhone` é flexível e pode ser reutilizado em diferentes contextos de formulário, como autenticação, cadastro e perfis de usuário. Com suporte a validações e personalizações, ele é uma escolha sólida para aplicações modernas.
 
 ---
-
-Esse modelo pode ser adaptado conforme a necessidade do seu projeto e componentes! 🎉
