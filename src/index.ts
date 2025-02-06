@@ -1,2 +1,1 @@
-export { default as InputText } from "./components/input-text";
-export { default as InputNumber } from "./components/input-number";
+export { default as InputPhone } from "./components/phone/input-phone";
